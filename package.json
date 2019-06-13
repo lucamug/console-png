@@ -10,8 +10,9 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "ansi-256-colors": "^1.1.0",
     "png.js": "^0.1.1",
-    "ansi-256-colors": "^1.1.0"
+    "pngjs": "^3.4.0"
   },
   "standard": {
     "ignore": []

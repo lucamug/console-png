@@ -10,11 +10,13 @@ function printDouble (buffer, done) {
   reader.parse(function (err, png) {
     if (err) return done(err)
     var s = ''
+    // console.log("xxx", png.getHeight() , png.getWidth() )
     for (var y = 0; y < png.getHeight() - 1; y += 2) {
       if (s) s += colors.reset + '\n'
       for (var x = 0; x < png.getWidth(); x++) {
         var p1 = png.getPixel(x, y)
         var p2 = png.getPixel(x, y + 1)
+        // console.log(p1, p2)
         var r1 = Math.round(p1[0] / 255 * 5)
         var g1 = Math.round(p1[1] / 255 * 5)
         var b1 = Math.round(p1[2] / 255 * 5)
